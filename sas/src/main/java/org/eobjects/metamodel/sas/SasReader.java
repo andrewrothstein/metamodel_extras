@@ -446,6 +446,8 @@ public class SasReader {
 		final String sasRelease = IO.readString(header, 216, 8);
 		final String sasHost = IO.readString(header, 224, 8);
 
+		System.out.println("statRelease=" + sasRelease + ", host=" + sasHost);
+
 		return new SasHeader(sasRelease, sasHost, pageSize, pageCount);
 	}
 }
