@@ -1,4 +1,8 @@
-package org.eobjects.metamodel.sas;
+package csv;
+
+import org.eobjects.metamodel.sas.SasColumnType;
+import org.eobjects.metamodel.sas.SasReader;
+import org.eobjects.metamodel.sas.SasReaderCallback;
 
 /**
  * Created by arothste on 4/26/15.

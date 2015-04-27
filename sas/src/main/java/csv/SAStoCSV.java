@@ -1,4 +1,6 @@
-package org.eobjects.metamodel.sas;
+package csv;
+
+import org.eobjects.metamodel.sas.SasReader;
 
 import java.io.File;
 
@@ -8,6 +10,7 @@ import java.io.File;
 public class SAStoCSV {
 
     static void main(String [] args) {
+        System.out.println("processing " + args[1] + "...");
         File f = new File(args[1]);
         SasReader r = new SasReader(f);
         r.read(new SAStoCSVCallback());
