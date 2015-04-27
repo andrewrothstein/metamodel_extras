@@ -9,7 +9,7 @@ import java.io.File;
  */
 public class SAStoCSV {
 
-    static void main(String [] args) {
+    public static void main(String [] args) {
         System.out.println("processing " + args[1] + "...");
         File f = new File(args[1]);
         SasReader r = new SasReader(f);
