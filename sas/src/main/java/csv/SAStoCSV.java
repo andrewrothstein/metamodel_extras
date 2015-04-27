@@ -10,7 +10,10 @@ import java.io.File;
 public class SAStoCSV {
 
     public static void main(String [] args) {
-        System.out.println("processing " + args[1] + "...");
+        for (String arg : args) {
+            System.out.println("arg: " + arg);
+        }
+        System.out.println("processing " + args[0] + "...");
         File f = new File(args[1]);
         SasReader r = new SasReader(f);
         r.read(new SAStoCSVCallback());
