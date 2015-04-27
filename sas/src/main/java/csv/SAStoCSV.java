@@ -14,7 +14,7 @@ public class SAStoCSV {
             System.out.println("arg: " + arg);
         }
         System.out.println("processing " + args[0] + "...");
-        File f = new File(args[1]);
+        File f = new File(args[0]);
         SasReader r = new SasReader(f);
         r.read(new SAStoCSVCallback());
     }
