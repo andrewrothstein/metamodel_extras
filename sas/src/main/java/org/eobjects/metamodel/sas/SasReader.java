@@ -435,15 +435,13 @@ public class SasReader {
 		if (pageSize < 0) {
 			throw new SasReaderException("Page size is negative: " + pageSize);
 		}
-
 		final int pageCount = IO.readInt(header, 204);
 		if (pageCount < 1) {
 			throw new SasReaderException("Page count is not positive: "
 					+ pageCount);
 		}
 
-		logger.info("({}) page size={}, page count={}", new Object[] { _file,
-				pageSize, pageCount });
+		System.out.println(_file + " page size=" + pageSize + ", page count=" + pageCount);
 
 		final String sasRelease = IO.readString(header, 216, 8);
 		final String sasHost = IO.readString(header, 224, 8);
